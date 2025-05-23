@@ -2,7 +2,7 @@
 📝 Project Description:<br>
 The Image Search Engine is a web-based application that allows users to search for images based on keywords. It uses the Unsplash API (or Pexels/Pixabay) to fetch high-quality, royalty-free images in real-time. Built using HTML, CSS, and JavaScript, this project demonstrates API integration, dynamic DOM manipulation, and responsive design.
 <br>
-🔧 Technologies Used:
+🔧 Technologies Used:<br>
 HTML5 – For structuring the web page.
 <br>
 CSS3 – For styling and responsive design.
@@ -11,7 +11,7 @@ JavaScript (Vanilla) – For handling user interaction, making API calls, and dy
 <br>
 Optional: Unsplash API / Pixabay API / Pexels API for image data.
 <br><br>
-🎯 Features:
+🎯 Features:<br>
 🔍 Search Functionality: Users can enter keywords to search for related images.
 <br>
 📸 Image Display: Results are displayed in a grid layout with thumbnails.
@@ -24,7 +24,7 @@ Optional: Unsplash API / Pixabay API / Pexels API for image data.
 <br>
 🔁 Load More: Option to fetch more images as the user scrolls or clicks a button.
 <br><br>
-🛠 How It Works:
+🛠 How It Works:<br>
 User Input: The user types a keyword into the search bar.
 <br>
 API Request: JavaScript sends an API request to the image provider with the keyword.
@@ -33,7 +33,7 @@ Fetch Response: Images are received in JSON format.
 <br>
 Render UI: JavaScript dynamically creates HTML elements to display the images in a styled grid layout.
 <br><br>
-✅ Learning Outcomes:
+✅ Learning Outcomes:<br>
 Working with third-party APIs.
 <br>
 Handling asynchronous JavaScript (fetch/async-await).
