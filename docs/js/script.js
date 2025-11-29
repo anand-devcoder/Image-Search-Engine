@@ -14,7 +14,7 @@ async function getResponse() {
 
     // Backend proxy call (API key hidden)
     // let url = `http://localhost:3000/search?q=${encodeURIComponent(keyword)}&start=${start}`;
-    let url = `https://image-search-engine.onrender.com/search?q=${encodeURIComponent(keyword)}&start=${start}`;
+    let url = `https://image-search-engine-6d5i.onrender.com/search?q=${encodeURIComponent(keyword)}&start=${start}`;
     
     try {
         let response = await fetch(url);
@@ -56,7 +56,7 @@ async function getResponse() {
             //    download(proxyUrl);
             //});
             downloadBtn.addEventListener("click", () => {
-                const proxyUrl = `https://image-search-engine.onrender.com/download?url=${encodeURIComponent(result.link)}`;
+                const proxyUrl = `https://image-search-engine-6d5i.onrender.com/download?url=${encodeURIComponent(result.link)}`;
                 download(proxyUrl);
             });
  
