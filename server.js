@@ -9,7 +9,22 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Allow all origins
-app.use(cors());
+// app.use(cors());
+const allowedOrigins = [
+    "https://anand-devcoder.github.io",   // your frontend URL
+    "http://localhost:3000"               // local testing
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    }
+}));
+
 
 // 🔹 Download route must come BEFORE static serve
 app.get("/download", async (req, res) => {
