@@ -13,8 +13,9 @@ async function getResponse() {
     let start = (page - 1) * 10 + 1;
 
     // Backend proxy call (API key hidden)
-    let url = `http://localhost:3000/search?q=${encodeURIComponent(keyword)}&start=${start}`;
-
+    // let url = `http://localhost:3000/search?q=${encodeURIComponent(keyword)}&start=${start}`;
+    let url = `https://image-search-engine.onrender.com/search?q=${encodeURIComponent(keyword)}&start=${start}`;
+    
     try {
         let response = await fetch(url);
         if (!response.ok) throw new Error("Network response was not ok");
@@ -50,11 +51,17 @@ async function getResponse() {
 
             // 🔹 Download button → use backend proxy to avoid CORS
             const downloadBtn = details.querySelector(".download");
+            //downloadBtn.addEventListener("click", () => {
+            //    const proxyUrl = `http://localhost:3000/download?url=${encodeURIComponent(result.link)}`;
+            //    download(proxyUrl);
+            //});
             downloadBtn.addEventListener("click", () => {
-                const proxyUrl = `http://localhost:3000/download?url=${encodeURIComponent(result.link)}`;
+                const proxyUrl = `https://image-search-engine.onrender.com/download?url=${encodeURIComponent(result.link)}`;
                 download(proxyUrl);
             });
+ 
 
+            
             li.appendChild(img);
             li.appendChild(details);
             images.appendChild(li);
